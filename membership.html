@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .modal-header, h4, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" href=#>
+      <img src="icon.jpg" alt="Martin De Porres's icon" class="img-thumbnail" style="border-radius:50%; width: 50px; height:auto;">
+    </a>
+    <a class="navbar-brand" href="#"> ST. MARTIN DE PORRES </a></li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"> HOME </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            ABOUT US
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="aboutUs.html#introduction"> Introduction </a>
+            <a class="dropdown-item" href="aboutUs.html#mission"> Mission </a>
+            <a class="dropdown-item" href="aboutUs.html#vision"> Vision </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="aboutUs.html#contactUs"> Contact Us </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SOCIETIES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="children.html"> Children </a>
+            <a class="dropdown-item" href="youth.html"> Youth </a>
+            <a class="dropdown-item" href="adults.html"> Adults </a>
+            <a class="dropdown-item" href="prayerGroups.html"> Prayer Groups </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="generalGroups.html"> General Groups </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            SERVICES
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="weddings.html"> Weddings </a>
+            <a class="dropdown-item" href="funerals.html"> Funerals </a>
+            <a class="dropdown-item" href="outdoorings.html"> Outdoorings </a>
+            <a class="dropdown-item" href="anniversaries.html"> Anniversaries </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="conferences.html"> Conferences </a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            MEMBERSHIP
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="signup.html"> Register to join the family(SignUp) </a>
+            <a class="dropdown-item" href="register.html"> Join a society(Register) </a>
+            <a class="dropdown-item" href="appointment.html"> Book an appointment </a>
+            <a class="dropdown-item" href="venue.html"> Book a venue </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="payment.html"> Make payment or make a donation </a>
+          </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <div class="container" id="signup">
+      <h2> Register to join the St. Martin De Porres </h2>
+      <!-- Trigger the modal with a button -->
+      <p> We are excited to have you join our family.
+        We are always looking to welcome new members into our family.
+        This is the best decision you will make.
+        The bible says that
+        let us not neglect our meeting together,
+        as some people do,
+        but encourage one another,
+        especially now that the day of his return is drawing near
+        (Hebrews 10:25)</p>
+        <button type="button" class="btn btn-success btn-lg" id="myBtn">Sign Up</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header" style="padding:35px 50px;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4> Sign Up </h4>
+              </div>
+              <div class="modal-body" style="padding: 20px 10px 10px 10px;">
+                <form method="post" style="padding: 20px 10px 10px 10px;" class="form-control-lg needs-validation" novalidate>
+                  <div class="bootstrap-iso">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="form-group row">
+                            <label class="col-sm-3 col-form-label requiredField" for="fname">
+                              First name
+                            </label>
+                            <div class="col-sm-9">
+                              <input class="form-control" id="fname" name="fname" placeholder="Jane" type="text" required/>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-3 control-label requiredField" for="lname">
+                              Last name
+                            </label>
+                            <div class="col-sm-9">
+                              <input class="form-control" id="name1" name="name1" placeholder="Doe" type="text"/>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-4 control-label requiredField" for="date">
+                              Date of Birth
+                            </label>
+                            <div class="col-sm-8 input-group">
+                              <input class="form-control" id="date" type="date" name="date" placeholder="MM/DD/YYYY" type="text" required/>
+                            </div>
+                          </div>
+                          <div class="form-group row" id="div_radio">
+                            <label class="col-sm-4 control-label requiredField" for="customRadio"> Gender </label>
+                            <div class="col-sm-3 custom-control custom-radio custom-control-inline">
+                              <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
+                              <label class="custom-control-label" for="customRadio"> male </label>
+                            </div>
+                            <div class="col-sm-3 custom-control custom-radio custom-control-inline">
+                              <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
+                              <label class="custom-control-label" for="customRadio2"> female </label>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-5 control-label requiredField" for="status">
+                              Relationship Status
+                            </label>
+                            <div class="col-sm-7">
+                              <select class="custom-select-md form-control" id="status" name="status" required>
+                                <option selected> Relationship status </option>
+                                <option value="Single">
+                                  Single
+                                </option>
+                                <option value="Married">
+                                  Married
+                                </option>
+                                <option value="Separated">
+                                  Separated
+                                </option>
+                                <option value="Widowed">
+                                  Widowed
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-2 control-label requiredField" for="email">
+                              Email
+                            </label>
+                            <div class="col-sm-10">
+                              <input class="form-control" id="email" name="email" placeholder="johndoe@example.com" type="text"/>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-5 control-label requiredField" for="tel">
+                              Telephone  number
+                            </label>
+                            <div class="col-sm-7">
+                              <input class="form-control" id="tel" name="tel" type="text" placeholder="0200000000"/>
+                            </div>
+                          </div>
+                          <div class="form-group row">
+                            <label class="col-sm-3 control-label requiredField" for="tel">
+                              Picture
+                            </label>
+                            <div class="col-sm-9">
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Where do you live? </label>
+                            <div class="form-group row">
+                              <div class="col-sm-5">
+                                <input type="text" class="form-control" placeholder="Area name">
+                              </div>
+                              <div class="col-sm-4">
+                                <input type="text" class="form-control" placeholder="Street name">
+                              </div>
+                              <div class="col-sm-3">
+                                <input type="text" class="form-control" placeholder="Group number">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleFormControlFile1">Highest sacarament completed </label>
+                            <div class="input-group">
+                              <input type="text" class="form-control" placeholder=" Highest Sacarament " aria-label="Text input with segmented dropdown button">
+                              <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-secondary">Sacarament</button>
+                                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="baptism.html"> Baptism </a>
+                                  <a class="dropdown-item" href="holyEucharist.html"> Holy Eucharist </a>
+                                  <a class="dropdown-item" href="confirmation.html"> Confirmation </a>
+                                  <a class="dropdown-item" href="holyMatrimony.html"> Holy Matrimony </a>
+                                  <a class="dropdown-item" href="holyOrders.html"> Holy Orders </a>
+                                  <div role="separator" class="dropdown-divider"></div>
+                                  <a class="dropdown-item" href="#">None</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div>
+                              <button class="btn btn-secondary btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" name="submit" type="submit">
+                                Submit
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <p> You are welcome to the St. Martin De Porres family</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="container" id="register">
+      <h2> Register to join a society </h2>
+      <!-- Trigger the modal with a button -->
+      <p> We are excited to have you join our society.
+        We are always looking to welcome new members into our societies.
+        This is the best decision you will make.
+        The bible says that
+        let us not neglect our meeting together,
+        as some people do,
+        but encourage one another,
+        especially now that the day of his return is drawing near
+        (Hebrews 10:25)</p>
+      <button type="button" class="btn btn-info btn-lg" id="myBtn1">Register</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4> Register </h4>
+            </div>
+            <div class="modal-body" style="padding: 20px 10px 10px 10px;">
+              <form method="post" style="padding: 20px 10px 10px 10px;" class="form-control-lg needs-validation" novalidate>
+                <div class="bootstrap-iso">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label requiredField" for="fname">
+                            First name
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="fname" name="fname" placeholder="Jane" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 control-label requiredField" for="lname">
+                            Last name
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="name1" name="name1" placeholder="Doe" type="text"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-4 control-label requiredField" for="date">
+                            Date of Birth
+                          </label>
+                          <div class="col-sm-8 input-group">
+                            <input class="form-control" id="date" type="date" name="date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group row" id="div_radio">
+                            <label class="col-sm-4 control-label requiredField" for="customRadio"> Gender </label>
+                          <div class="col-sm-3 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio" name="example" value="customEx">
+                            <label class="custom-control-label" for="customRadio"> male </label>
+                          </div>
+                          <div class="col-sm-3 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="example" value="customEx">
+                            <label class="custom-control-label" for="customRadio2"> female </label>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-5 control-label requiredField" for="status">
+                            Relationship Status
+                          </label>
+                          <div class="col-sm-7">
+                            <select class="custom-select-md form-control" id="status" name="status" required>
+                              <option selected> Relationship status </option>
+                              <option value="Single">
+                                Single
+                              </option>
+                              <option value="Married">
+                                Married
+                              </option>
+                              <option value="Separated">
+                                Separated
+                              </option>
+                              <option value="Widowed">
+                                Widowed
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 control-label requiredField" for="email">
+                            Email
+                          </label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="email" name="email" placeholder="johndoe@example.com" type="text"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-5 control-label requiredField" for="tel">
+                            Telephone  number
+                          </label>
+                          <div class="col-sm-7">
+                            <input class="form-control" id="tel" name="tel" type="text" placeholder="0200000000"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 control-label requiredField" for="tel">
+                            Picture
+                          </label>
+                          <div class="col-sm-9">
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="customFile">
+                              <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1">Where do you live? </label>
+                          <div class="form-group row">
+                            <div class="col-sm-5">
+                              <input type="text" class="form-control" placeholder="Area name">
+                            </div>
+                            <div class="col-sm-4">
+                              <input type="text" class="form-control" placeholder="Street name">
+                            </div>
+                            <div class="col-sm-3">
+                              <input type="text" class="form-control" placeholder="Group number">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label requiredField" for="fname">
+                            Name of society
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="fname" name="fname" placeholder="CYO" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="comment"> Reason for joining the society </label>
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                          <div>
+                            <button class="btn btn-secondary btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" name="submit" type="submit">
+                              Submit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+              <p> You are welcome to the society</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="appointment">
+      <h2> Book an appointment </h2>
+      <!-- Trigger the modal with a button -->
+      <p> We are excited to have you have decided to meet the person who will help you.
+        We are always looking to welcome people who wish to meet us.
+        We are excited to see meet you.
+        The bible says that
+        let us not neglect our meeting together,
+        as some people do,
+        but encourage one another,
+        especially now that the day of his return is drawing near
+        (Hebrews 10:25)</p>
+      <button type="button" class="btn btn-secondary btn-lg" id="myBtn2"> Book an appointment </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4> Book an appointment </h4>
+            </div>
+            <div class="modal-body" style="padding: 20px 10px 10px 10px;">
+              <form method="post" style="padding:20px 10px 10px 10px;" class="form-control-lg needs-validation" novalidate>
+                <div class="bootstrap-iso">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-5">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label requiredField" for="fname">
+                            First name
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="fname" name="fname" placeholder="Jane" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 control-label requiredField" for="lname">
+                            Last name
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="name1" name="name1" placeholder="Doe" type="text"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 control-label requiredField" for="email">
+                            Email
+                          </label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="email" name="email" placeholder="johndoe@example.com" type="text"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-5 control-label requiredField" for="tel">
+                            Telephone  number
+                          </label>
+                          <div class="col-sm-7">
+                            <input class="form-control" id="tel" name="tel" type="text" placeholder="0200000000"/>
+                          </div>
+                        </div>
+                        <div class="form-group row" id="div_radio">
+                          <label class="col-sm-5 control-label requiredField" for="customRadio"> Method of contact </label>
+                          <div class="col-sm-2 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio" name="phone" value="phone">
+                            <label class="custom-control-label" for="phone"> phone </label>
+                          </div>
+                          <div class="col-sm-2 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="email" value="email">
+                            <label class="custom-control-label" for="email"> email </label>
+                          </div>
+                          <div class="col-sm-2 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="any" value="any">
+                            <label class="custom-control-label" for="any"> any </label>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-4 control-label requiredField" for="status">
+                            Person to see
+                          </label>
+                          <div class="col-sm-8">
+                            <select class="custom-select-md form-control" id="status" name="status" required>
+                              <option selected> Person to see </option>
+                              <option value="Priest">
+                                Priest
+                              </option>
+                              <option value="Cathecist">
+                                Cathecist
+                              </option>
+                              <option value="Counsellor">
+                                Counsellor
+                              </option>
+                              <option value="Parish pastoral council">
+                                Parish Pastoral Council
+                              </option>
+                              <option value="Other">
+                                Other
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-7 control-label requiredField" for="date">
+                            Appointment date and time
+                          </label>
+                          <div class="col-sm-5 input-group">
+                            <input class="form-control" id="date" type="datetime-local" name="date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="comment"> Description of appointment </label>
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                        <div>
+                          <button class="btn btn-secondary btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" name="submit" type="submit">
+                            Submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+              <p> Thank you for the appointment, we will be expecting you.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="venue">
+      <h2> Book a Venue </h2>
+      <!-- Trigger the modal with a button -->
+      <p> We are excited to have you have decided to meet the person who will help you.
+        We are always looking to welcome people who wish to meet us.
+        We are excited to see meet you.
+        The bible says that
+        let us not neglect our meeting together,
+        as some people do,
+        but encourage one another,
+        especially now that the day of his return is drawing near
+        (Hebrews 10:25)</p>
+      <button type="button" class="btn btn-warning btn-lg" id="myBtn3">Book a venue</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4> Book a venue </h4>
+            </div>
+            <div class="modal-body" style="padding: 20px 10px 10px 10px;">
+              <form method="post" style="padding: 120px 5px 70px 5px;" class="form-control-lg needs-validation" novalidate>
+                <div class="bootstrap-iso">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-7">
+                        <div class="form-group row">
+                          <label class="col-sm-3 col-form-label requiredField" for="fname">
+                            First name
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="fname" name="fname" placeholder="Jane" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-3 control-label requiredField" for="lname">
+                            Last name
+                          </label>
+                          <div class="col-sm-9">
+                            <input class="form-control" id="name1" name="name1" placeholder="Doe" type="text"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-2 control-label requiredField" for="email">
+                            Email
+                          </label>
+                          <div class="col-sm-10">
+                            <input class="form-control" id="email" name="email" placeholder="johndoe@example.com" type="text"/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-5 control-label requiredField" for="tel">
+                            Telephone  number
+                          </label>
+                          <div class="col-sm-7">
+                            <input class="form-control" id="tel" name="tel" type="text" placeholder="0200000000"/>
+                          </div>
+                        </div>
+                        <div class="form-group row" id="div_radio">
+                          <label class="col-sm-5 control-label requiredField" for="customRadio"> Method of contact </label>
+                          <div class="col-sm-2 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio" name="phone" value="phone">
+                            <label class="custom-control-label" for="phone"> phone </label>
+                          </div>
+                          <div class="col-sm-2 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="email" value="email">
+                            <label class="custom-control-label" for="email"> email </label>
+                          </div>
+                          <div class="col-sm-2 custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="customRadio2" name="any" value="any">
+                            <label class="custom-control-label" for="any"> any </label>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-4 control-label requiredField" for="status">
+                            Venue required
+                          </label>
+                          <div class="col-sm-8">
+                            <select class="custom-select-md form-control" id="status" name="status" required>
+                              <option selected> Program Type </option>
+                              <option value="wedding">
+                                Wedding
+                              </option>
+                              <option value="Funeral">
+                                Funeral
+                              </option>
+                              <option value="Outdooring">
+                                Outdooring
+                              </option>
+                              <option value="Birthday">
+                                Birthday
+                              </option>
+                              <option value="Anniversary">
+                                Anniversary
+                              </option>
+                              <option value="Meeting">
+                                Meeting
+                              </option>
+                              <option value="Other">
+                                Other
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <div class="col-sm-6">
+                            Venue required for event
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Main Parish
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Adoration Chapel
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Northern Compound
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Southern Comppund
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Children's church
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="gridCheck1">
+                              <label class="form-check-label" for="gridCheck1">
+                                Conference Room
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-7 control-label requiredField" for="date">
+                            Event start date and time
+                          </label>
+                          <div class="col-sm-5 input-group">
+                            <input class="form-control" id="date" type="datetime-local" name="date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-7 control-label requiredField" for="date">
+                            Event end date and time
+                          </label>
+                          <div class="col-sm-5 input-group">
+                            <input class="form-control" id="date" type="datetime-local" name="date" placeholder="MM/DD/YYYY" type="text" required/>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-5 col-form-label requiredField" for="fname">
+                            Number of attendees
+                          </label>
+                          <div class="col-sm-7">
+                            <input class="form-control" id="fname" name="fname" placeholder="250" type="number" required/>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="comment"> Description of event </label>
+                          <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+                        <div class="form-group form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I, the organizer of the above event having read the <a href="#"> terms and conditions of usage </a> accept the Martin De Porres policy
+                            on the usage of the facility</label>
+                          </div>
+                          <div>
+                            <button class="btn btn-secondary btn-lg btn-block" data-toggle="button" aria-pressed="false" autocomplete="off" name="submit" type="submit">
+                              Submit
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <p> Thank you for booking a venue. Enjoy your event </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="payment">
+        <h2> Make donations or payments to the church </h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary btn-lg" id="myBtn4">Payment</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal4" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header" style="padding:35px 50px;">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4> Payment </h4>
+              </div>
+              <div class="modal-body" style="padding: 20px 10px 10px 10px;">
+                <form class="form-horizontal" role="form">
+                  <fieldset>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 control-label" for="card-number">Card Number</label>
+                      <div class="col-sm-9">
+                        <input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+                      <div class="col-sm-9">
+                        <div class="row">
+                          <div class="col-xs-3">
+                            <select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+                              <option>Month</option>
+                              <option value="01">Jan (01)</option>
+                              <option value="02">Feb (02)</option>
+                              <option value="03">Mar (03)</option>
+                              <option value="04">Apr (04)</option>
+                              <option value="05">May (05)</option>
+                              <option value="06">June (06)</option>
+                              <option value="07">July (07)</option>
+                              <option value="08">Aug (08)</option>
+                              <option value="09">Sep (09)</option>
+                              <option value="10">Oct (10)</option>
+                              <option value="11">Nov (11)</option>
+                              <option value="12">Dec (12)</option>
+                            </select>
+                          </div>
+                          <div class="col-xs-3">
+                            <select class="form-control" name="expiry-year">
+                              <option value="13">2013</option>
+                              <option value="14">2014</option>
+                              <option value="15">2015</option>
+                              <option value="16">2016</option>
+                              <option value="17">2017</option>
+                              <option value="18">2018</option>
+                              <option value="19">2019</option>
+                              <option value="20">2020</option>
+                              <option value="21">2021</option>
+                              <option value="22">2022</option>
+                              <option value="23">2023</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+                      <div class="col-sm-3">
+                        <input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-success">Pay Now</button>
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <p> Thank you for your donation or payment. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <nav class="navbar sticky-bottom navbar-dark bg-dark justified" style="height:6vh; padding:0px,0px,0px,0px;">
+    <div class="container text-center">
+      <p class="navbar-text col-md-12 col-sm-12 col-xs-12" style="color:white"> Copyright &copy; 2018 St. Martin De Porres </p>
+    </div>
+  </nav>
+
+  <script src="../js/membership.js"></script>
+
+</body>
+</html>
